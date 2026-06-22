@@ -164,6 +164,11 @@ const syncFromServer = async () => {
       dataServer
     );
 
+    await kirimNotifikasi(
+  'EduGuide',
+  `${dataServer.length} mata kuliah berhasil disinkronkan`
+);
+
     alert(
       `Berhasil sync ${dataServer.length} data`
     );
@@ -226,6 +231,34 @@ useEffect(() => {
     };
 
   autoSync();
+
+}, []);
+
+useEffect(() => {
+
+  const interval =
+    setInterval(async () => {
+
+      console.log(
+        'Periodic Sync Berjalan'
+      );
+
+      try {
+
+        await syncFromServer();
+
+      } catch (error) {
+
+        console.log(error);
+
+      }
+
+    }, 60000);
+
+  return () =>
+    clearInterval(
+      interval
+    );
 
 }, []);
 
@@ -495,21 +528,6 @@ useEffect(() => {
     title="Sync from Server"
     onPress={syncFromServer}
   />
-</View>
-<View
-  style={{
-    marginBottom: 15,
-  }}
->
-  <Button
-  title="Test Notifikasi"
-  onPress={() =>
-    kirimNotifikasi(
-      'EduGuide',
-      'Notifikasi berhasil dikirim'
-    )
-  }
-/>
 </View>
 
 <View
