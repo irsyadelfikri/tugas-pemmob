@@ -1,0 +1,51 @@
+export const mataKuliah = [
+  {
+    id: '1',
+    kode: 'IF301',
+    nama: 'Pemrograman Mobile',
+    sks: 3,
+    dosen: 'Panji Rachmat Setiawan, S.Kom., MMSI',
+  },
+  {
+    id: '2',
+    kode: 'IF302',
+    nama: 'Machine Learning',
+    sks: 3,
+    dosen: 'Anggi Hanafiah, S.Kom., M.Kom',
+  },
+  {
+    id: '3',
+    kode: 'IF303',
+    nama: 'Big Data',
+    sks: 3,
+    dosen: 'Mulyanto, S.T., M.Cs., Ph.D',
+  },
+  {
+    id: '4',
+    kode: 'IF304',
+    nama: 'Natural Language Processing',
+    sks: 3,
+    dosen: 'Prof. Dr. ARBI HAZA NASUTION, B.IT, M.I.T',
+  },
+  {
+    id: '5',
+    kode: 'IF305',
+    nama: 'Routing & Switching',
+    sks: 3,
+    dosen: 'Dr. Apri Siswanto, S.Kom., M.Kom',
+  },
+  {
+    id: '6',
+    kode: 'IF306',
+    nama: 'Implementasi & Pengujian Perangkat Lunak',
+    sks: 3,
+    dosen: 'Dr. Ir. AKMAR EFENDI, S.Kom., M.Kom',
+  },
+  {
+    id: '7',
+    kode: 'IF307',
+    nama: 'Interaksi Manusia & Komputer',
+    sks: 3,
+    dosen: 'Sri Listia Rosa, ST., M.Sc',
+  },
+];
