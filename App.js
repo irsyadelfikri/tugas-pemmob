@@ -22,6 +22,10 @@ import {
   tampilkanCacheMataKuliah,
 } from './src/storage/sqlite';
 
+import {
+  registerBackgroundTask,
+} from './src/services/backgroundTask';
+
 export default function App() {
 
   useEffect(() => {
@@ -31,6 +35,8 @@ export default function App() {
     initMataKuliahTable();
 
     tampilkanCacheMataKuliah();
+
+    registerBackgroundTask();
 
   }, []); 
 
